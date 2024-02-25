@@ -24,7 +24,7 @@ const SignupComponent = () => {
             return;
         }
         const data = {email, password, username, firstName, lastName};
-        const response = await makeUnauthenticatedPOSTRequest("/auth/register/",data);
+        const response = await makeUnauthenticatedPOSTRequest("/auth/register",data);
         if(response && !response.err){
             console.log(response);
             const token = response.token;
